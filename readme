@@ -1,0 +1,9 @@
+This repo is to host ILAMB output via github. 
+
+Steps to publishing output
+
+1. Change name of _build to docs
+2. Add, commit and push these changes. 
+3. Make non important change to index.html
+4. Commit this. 
+5. Wait for a while until it is deployed. 
