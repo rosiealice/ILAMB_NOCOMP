@@ -154,19 +154,15 @@
         }
         if(0){
           document.getElementById("Benchmark_legend").style.display = 'none';
-          document.getElementById("ctsm51fates_derecho_2s_nocomp_legend").style.display = 'none';
-          document.getElementById("ctsm51fates_derecho_norman_nocomp_legend").style.display = 'none';
+          document.getElementById("4x5_out_of_the_box_ann_legend").style.display = 'none';
         }else{
           document.getElementById("Benchmark_legend").style.display = 'inline';
-          document.getElementById("ctsm51fates_derecho_2s_nocomp_legend").style.display = 'inline';
-          document.getElementById("ctsm51fates_derecho_norman_nocomp_legend").style.display = 'inline';
+          document.getElementById("4x5_out_of_the_box_ann_legend").style.display = 'inline';
         }
         document.getElementById('Benchmark').src = 'Benchmark_' + RNAME + '_' + PNAME + '.png';
         document.getElementById('Benchmark_legend').src = 'legend_' + PNAME + '.png';
-        document.getElementById('ctsm51fates_derecho_2s_nocomp').src = 'ctsm51fates_derecho_2s_nocomp_' + RNAME + '_' + PNAME + '.png';
-        document.getElementById('ctsm51fates_derecho_2s_nocomp_legend').src = 'legend_' + PNAME + '.png';
-        document.getElementById('ctsm51fates_derecho_norman_nocomp').src = 'ctsm51fates_derecho_norman_nocomp_' + RNAME + '_' + PNAME + '.png';
-        document.getElementById('ctsm51fates_derecho_norman_nocomp_legend').src = 'legend_' + PNAME + '.png';
+        document.getElementById('4x5_out_of_the_box_ann').src = '4x5_out_of_the_box_ann_' + RNAME + '_' + PNAME + '.png';
+        document.getElementById('4x5_out_of_the_box_ann_legend').src = 'legend_' + PNAME + '.png';
       }
 
       $(document).on('pageshow', '[data-role="page"]', function(){
@@ -237,8 +233,7 @@
       <div style="display:none">
       <select id="MeanStateModel">
         <option value='Benchmark'>Benchmark</option>
-        <option value='ctsm51fates_derecho_2s_nocomp' selected="selected">ctsm51fates_derecho_2s_nocomp</option>
-        <option value='ctsm51fates_derecho_norman_nocomp'>ctsm51fates_derecho_norman_nocomp</option>
+        <option value='4x5_out_of_the_box_ann' selected="selected">4x5_out_of_the_box_ann</option>
       </select>
       </div>
         <center>
@@ -277,34 +272,19 @@
                <td></td>
              </tr>
              <tr>
-               <td onclick="highlightRowMeanState(this)" class="row-header">ctsm51fates_derecho_2s_nocomp</td>
-               <td onclick="highlightRowMeanState(this)"><a href="NBCD2000_ctsm51fates_derecho_2s_nocomp.nc" download>[-]</a></td>
-               <td onclick="highlightRowMeanState(this)">21.6</td>
-               <td onclick="highlightRowMeanState(this)">1.38</td>
+               <td onclick="highlightRowMeanState(this)" class="row-header">4x5_out_of_the_box_ann</td>
+               <td onclick="highlightRowMeanState(this)"><a href="NBCD2000_4x5_out_of_the_box_ann.nc" download>[-]</a></td>
+               <td onclick="highlightRowMeanState(this)">77.6</td>
+               <td onclick="highlightRowMeanState(this)">3.60</td>
                <td onclick="highlightRowMeanState(this)">26.2</td>
-               <td onclick="highlightRowMeanState(this)">20.2</td>
+               <td onclick="highlightRowMeanState(this)">74.0</td>
                <td onclick="highlightRowMeanState(this)"></td>
                <td onclick="highlightRowMeanState(this)" class="divider"></td>
-               <td onclick="highlightRowMeanState(this)">-2.97</td>
+               <td onclick="highlightRowMeanState(this)">-2.67</td>
                <td onclick="highlightRowMeanState(this)" class="divider"></td>
-               <td onclick="highlightRowMeanState(this)">0.389</td>
-               <td onclick="highlightRowMeanState(this)">0.00578</td>
-               <td onclick="highlightRowMeanState(this)">0.197</td>
-             </tr>
-             <tr>
-               <td onclick="highlightRowMeanState(this)" class="row-header">ctsm51fates_derecho_norman_nocomp</td>
-               <td onclick="highlightRowMeanState(this)"><a href="NBCD2000_ctsm51fates_derecho_norman_nocomp.nc" download>[-]</a></td>
-               <td onclick="highlightRowMeanState(this)">22.8</td>
-               <td onclick="highlightRowMeanState(this)">1.47</td>
-               <td onclick="highlightRowMeanState(this)">26.2</td>
-               <td onclick="highlightRowMeanState(this)">21.4</td>
-               <td onclick="highlightRowMeanState(this)"></td>
-               <td onclick="highlightRowMeanState(this)" class="divider"></td>
-               <td onclick="highlightRowMeanState(this)">-2.96</td>
-               <td onclick="highlightRowMeanState(this)" class="divider"></td>
-               <td onclick="highlightRowMeanState(this)">0.390</td>
-               <td onclick="highlightRowMeanState(this)">0.00655</td>
-               <td onclick="highlightRowMeanState(this)">0.198</td>
+               <td onclick="highlightRowMeanState(this)">0.423</td>
+               <td onclick="highlightRowMeanState(this)">0.104</td>
+               <td onclick="highlightRowMeanState(this)">0.263</td>
              </tr>
           </tbody>
         </table>
@@ -386,18 +366,11 @@
           <center><img src="legend_Benchmark.png" id="Benchmark_legend"  alt="Data not available" ></img></center>
           </div>
         </div>
-        <div class="container" id="ctsm51fates_derecho_2s_nocomp_div">
+        <div class="container" id="4x5_out_of_the_box_ann_div">
           <div class="child">
-          <center>ctsm51fates_derecho_2s_nocomp</center>
-          <img src="" id="ctsm51fates_derecho_2s_nocomp" alt="Data not available" ></img>
-          <center><img src="legend_ctsm51fates_derecho_2s_nocomp.png" id="ctsm51fates_derecho_2s_nocomp_legend"  alt="Data not available" ></img></center>
-          </div>
-        </div>
-        <div class="container" id="ctsm51fates_derecho_norman_nocomp_div">
-          <div class="child">
-          <center>ctsm51fates_derecho_norman_nocomp</center>
-          <img src="" id="ctsm51fates_derecho_norman_nocomp" alt="Data not available" ></img>
-          <center><img src="legend_ctsm51fates_derecho_norman_nocomp.png" id="ctsm51fates_derecho_norman_nocomp_legend"  alt="Data not available" ></img></center>
+          <center>4x5_out_of_the_box_ann</center>
+          <img src="" id="4x5_out_of_the_box_ann" alt="Data not available" ></img>
+          <center><img src="legend_4x5_out_of_the_box_ann.png" id="4x5_out_of_the_box_ann_legend"  alt="Data not available" ></img></center>
           </div>
         </div>
     </div>

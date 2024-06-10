@@ -1,4 +1,4 @@
-[INFO][0][<module>] Linux derecho1 5.14.21-150400.24.18-default #1 SMP PREEMPT_DYNAMIC Thu Aug 4 14:17:48 UTC 2022 (e9f7bfc) x86_64 x86_64
+[INFO][0][<module>] Linux derecho3 5.14.21-150400.24.18-default #1 SMP PREEMPT_DYNAMIC Thu Aug 4 14:17:48 UTC 2022 (e9f7bfc) x86_64 x86_64
 [INFO][0][<module>] /glade/u/home/rfisher/.local/lib/python3.9/site-packages/ILAMB (2.7)
 [INFO][0][<module>] /glade/u/apps/opt/conda/envs/npl-2023a/lib/python3.9/site-packages/numpy (1.23.5)
 [INFO][0][<module>] /glade/u/apps/opt/conda/envs/npl-2023a/lib/python3.9/site-packages/matplotlib (3.6.3)
@@ -6,15 +6,32 @@
 [INFO][0][<module>] /glade/u/apps/opt/conda/envs/npl-2023a/lib/python3.9/site-packages/cf_units (3.1.1)
 [INFO][0][<module>] /glade/u/home/rfisher/.local/lib/python3.9/site-packages/sympy (1.12)
 [INFO][0][<module>] /glade/u/apps/opt/conda/envs/npl-2023a/lib/python3.9/site-packages/mpi4py (3.1.4)
-[INFO][0][<module>] 2024-01-03 14:02:05.509547
-[INFO][3][<module>][process time] 0.0 s
-[INFO][2][<module>][process time] 0.0 s
-[INFO][6][<module>][process time] 0.0 s
-[INFO][5][<module>][process time] 0.0 s
-[INFO][0][<module>][process time] 0.0 s
-[INFO][4][<module>][process time] 0.0 s
-[INFO][7][<module>][process time] 0.0 s
-[INFO][1][<module>][process time] 0.0 s
-[INFO][0][<module>][total time] 0.4 s
-[INFO][0][<module>][process balance] nan
-[INFO][0][<module>][parallel efficiency] 0%
+[INFO][0][<module>] 2024-06-10 03:58:30.299925
+[DEBUG][0][WorkConfront][Albedo/GEWEX.SRB][4x5_out_of_the_box_ann]
+Traceback (most recent call last):
+  File "/glade/u/home/rfisher/.local/bin/ilamb-run", line 561, in WorkConfront
+    c.confront(m)
+  File "/glade/u/home/rfisher/.local/lib/python3.9/site-packages/ILAMB/ConfAlbedo.py", line 157, in confront
+    obs, mod, obs_timeint, mod_timeint = self.stageData(m)
+  File "/glade/u/home/rfisher/.local/lib/python3.9/site-packages/ILAMB/ConfAlbedo.py", line 44, in stageData
+    dn_obs = Variable(
+  File "/glade/u/home/rfisher/.local/lib/python3.9/site-packages/ILAMB/Variable.py", line 140, in __init__
+    out = il.FromNetCDF4(
+  File "/glade/u/home/rfisher/.local/lib/python3.9/site-packages/ILAMB/ilamblib.py", line 724, in FromNetCDF4
+    dset = Dataset(filename, mode="r")
+  File "src/netCDF4/_netCDF4.pyx", line 2463, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 2026, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: b'/glade/work/rfisher/FATES_calibration/ILAMB_data/DATA/rsds/GEWEX.SRB/rsds_0.5x0.5.nc'
+
+[INFO][0][modelPlots][TerrestrialWaterStorageAnomaly/GRACE][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceNetSWRadiation/GEWEX.SRB][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceNetSWRadiation/WRMC.BSRN][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceUpwardLWRadiation/GEWEX.SRB][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceUpwardLWRadiation/WRMC.BSRN][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceNetLWRadiation/GEWEX.SRB][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceNetLWRadiation/WRMC.BSRN][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceNetRadiation/GEWEX.SRB][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceNetRadiation/WRMC.BSRN][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceDownwardLWRadiation/GEWEX.SRB][4x5_out_of_the_box_ann] Success
+[INFO][0][modelPlots][SurfaceDownwardLWRadiation/WRMC.BSRN][4x5_out_of_the_box_ann] Success
+[DEBUG][0][generateHtml][TerrestrialWaterStorageAnomaly/GRACE][Benchmark] 'global' not in region list = []
